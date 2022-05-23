@@ -16,7 +16,7 @@
     "@fontsource/noto-sans-sc": "^4.5.10",
     "@fontsource/roboto": "^4.5.7",
     "@mui/icons-material": "^5.8.0",
-    "@mui/lab": "^5.0.0-alpha.82",
+    "@mui/lab": "^5.0.0-alpha.83",
     "@mui/material": "^5.8.0",
     "@reduxjs/toolkit": "^1.8.1",
     "@types/crypto-js": "^4.1.1",
