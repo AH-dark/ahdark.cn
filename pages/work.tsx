@@ -12,6 +12,9 @@ import {
     TimelineOppositeContent,
     TimelineSeparator,
 } from "@mui/lab";
+import { useAppDispatch } from "../redux/hooks";
+import { useEffect } from "react";
+import { setTitle } from "../redux/reducers/viewUpdate";
 
 // noinspection JSUnusedGlobalSymbols
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -25,6 +28,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const Work: NextPage<{ post: string }> = (props) => {
+    const dispatch = useAppDispatch();
+    useEffect(() => {
+        dispatch(setTitle("Work"));
+    }, [dispatch]);
+
     return (
         <Layout>
             <Paper

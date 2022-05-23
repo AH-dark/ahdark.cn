@@ -13,6 +13,7 @@ const options = {
                 gutterBottom: true,
                 variant: "h4",
                 component: "h1",
+                align: "center",
             },
         },
         h2: {

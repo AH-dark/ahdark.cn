@@ -2,12 +2,16 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface ViewUpdateState {
     title: string | null;
-    sidebarOpen: boolean;
+    sidebar: {
+        open: boolean;
+    };
 }
 
 const initState: ViewUpdateState = {
     title: null,
-    sidebarOpen: false,
+    sidebar: {
+        open: false,
+    },
 };
 
 const viewUpdate = createSlice({
@@ -18,7 +22,7 @@ const viewUpdate = createSlice({
             state.title = action.payload;
         },
         setSidebarOpen(state, action: PayloadAction<boolean>) {
-            state.sidebarOpen = action.payload;
+            state.sidebar.open = action.payload;
         },
     },
 });

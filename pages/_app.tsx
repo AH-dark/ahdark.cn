@@ -1,14 +1,15 @@
-import type { AppProps }                            from "next/app";
-import wrapper                                      from "../redux/wrapper";
-import { CacheProvider }                            from "@emotion/react";
+import type { AppProps } from "next/app";
+import wrapper from "../redux/wrapper";
+import { CacheProvider } from "@emotion/react";
 import { createTheme, GlobalStyles, ThemeProvider } from "@mui/material";
-import createCache                                  from "@emotion/cache";
-import { useAppSelector }                           from "../redux/hooks";
-import React, { useEffect }                         from "react";
-import Head                                         from "next/head";
-import config                                       from "../config";
+import createCache from "@emotion/cache";
+import { useAppSelector } from "../redux/hooks";
+import React, { useEffect } from "react";
+import Head from "next/head";
+import config from "../config";
 import "@fontsource/roboto";
 import "@fontsource/noto-sans-sc";
+import { SnackbarProvider } from "notistack";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -62,7 +63,14 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
                         },
                     }}
                 />
-                <Component {...pageProps} />
+                <SnackbarProvider
+                    anchorOrigin={{
+                        horizontal: "right",
+                        vertical: "top",
+                    }}
+                >
+                    <Component {...pageProps} />
+                </SnackbarProvider>
             </ThemeProvider>
         </CacheProvider>
     );
