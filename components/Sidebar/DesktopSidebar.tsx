@@ -1,8 +1,9 @@
 import React from "react";
 import { Box, Paper, Typography } from "@mui/material";
-import Avatar from "../../utils/avatar";
 import config from "../../config";
 import MenuList from "./MenuList";
+import Image from "next/image";
+import avatar from "../../source/images/avatar.png";
 
 const DesktopSidebar: React.FC = () => {
     return (
@@ -30,14 +31,18 @@ const DesktopSidebar: React.FC = () => {
                     px={1}
                     pb={1}
                 >
-                    <Box
-                        component={"img"}
-                        src={Avatar(config.owner.email, 96)}
-                        borderRadius={"50%"}
-                        marginTop={1}
-                        marginBottom={2}
-                        height={96}
-                    />
+                    <Box marginTop={2} marginBottom={1}>
+                        <Image
+                            src={avatar}
+                            style={{
+                                borderRadius: "50%",
+                            }}
+                            alt={"avatar"}
+                            height={96}
+                            width={96}
+                            priority
+                        />
+                    </Box>
                     <Typography variant={"h5"} component={"div"}>
                         {config.owner.name}
                     </Typography>

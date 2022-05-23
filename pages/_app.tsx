@@ -10,6 +10,8 @@ import config from "../config";
 import "@fontsource/roboto";
 import "@fontsource/noto-sans-sc";
 import { SnackbarProvider } from "notistack";
+import avatar from "../source/images/avatar.png";
+import favicon from "../source/images/favicon.png";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -53,7 +55,16 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
                     name="viewport"
                     content="initial-scale=1, width=device-width"
                 />
-                <meta name="description" content={config.SEO.description} />
+                <meta name={"description"} content={config.SEO.description} />
+                <link rel={"icon"} href={favicon.src} type={"image/png"} />
+                <meta property={"og:type"} content={"website"} />
+                <meta property={"og:locale"} content={"zh_CN"} />
+                <meta property={"og:image"} content={avatar.src} />
+                <meta property={"og:site_name"} content={config.siteName} />
+                <meta
+                    property={"og:description"}
+                    content={config.SEO.description}
+                />
             </Head>
             <ThemeProvider theme={theme}>
                 <GlobalStyles
