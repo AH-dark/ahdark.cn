@@ -9,7 +9,6 @@ const config = {
         description: "",
     },
     CDN: {
-        googleFont: "fonts.sourcegcdn.com",
         gravatar: "avatar.sourcegcdn.com",
     },
 };
