@@ -1,5 +1,5 @@
 import * as React from "react";
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 import { createEmotionCache } from "./_app";
 import createEmotionServer from "@emotion/server/create-instance";
 
@@ -8,11 +8,6 @@ export default class MyDocument extends Document {
         return (
             <Html lang="zh-cn">
                 <Head>
-                    {/* PWA primary color */}
-                    <link
-                        rel="stylesheet"
-                        href="https://fonts.sourcegcdn.com/css?family=Roboto:300,400,500,700&display=swap"
-                    />
                     {/* Inject MUI styles first to match with the prepend: true configuration. */}
                     {(this.props as any).emotionStyleTags}
                 </Head>

@@ -1,12 +1,14 @@
-import type { AppProps } from "next/app";
-import wrapper from "../redux/wrapper";
-import { CacheProvider } from "@emotion/react";
-import { createTheme, ThemeProvider } from "@mui/material";
-import createCache from "@emotion/cache";
-import { useAppSelector } from "../redux/hooks";
-import React, { useEffect } from "react";
-import Head from "next/head";
-import config from "../config";
+import type { AppProps }                            from "next/app";
+import wrapper                                      from "../redux/wrapper";
+import { CacheProvider }                            from "@emotion/react";
+import { createTheme, GlobalStyles, ThemeProvider } from "@mui/material";
+import createCache                                  from "@emotion/cache";
+import { useAppSelector }                           from "../redux/hooks";
+import React, { useEffect }                         from "react";
+import Head                                         from "next/head";
+import config                                       from "../config";
+import "@fontsource/roboto";
+import "@fontsource/noto-sans-sc";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -17,7 +19,18 @@ export function createEmotionCache() {
     return createCache({ key: "css", prepend: true });
 }
 
-const theme = createTheme();
+const fontFamily = [
+    "Roboto",
+    "Helvetica",
+    "Arial",
+    "Noto Sans SC",
+    "sans-serif",
+    "Noto Emoji",
+].join(",");
+
+const theme = createTheme({
+    typography: {},
+});
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     const title = useAppSelector((state) => state.viewUpdate.title);
@@ -42,6 +55,13 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
                 <meta name="description" content={config.SEO.description} />
             </Head>
             <ThemeProvider theme={theme}>
+                <GlobalStyles
+                    styles={{
+                        ":root": {
+                            fontFamily: fontFamily,
+                        },
+                    }}
+                />
                 <Component {...pageProps} />
             </ThemeProvider>
         </CacheProvider>
