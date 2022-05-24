@@ -18,4 +18,5 @@ export default interface Config {
         phpTrackerFile?: string;
         excludeUrlsPatterns?: RegExp[];
     };
+    wordpress: string;
 }

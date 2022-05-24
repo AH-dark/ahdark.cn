@@ -18,6 +18,7 @@ const config: Config = {
         url: "https://stat.ahdark.com",
         siteId: "18",
     },
+    wordpress: "https://ahdark.com/",
 };
 
 export default config;
