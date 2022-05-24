@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { setTitle } from "../redux/reducers/viewUpdate";
 
 // noinspection JSUnusedGlobalSymbols
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
     const post = fs.readFileSync("./source/pages/home.md").toString("utf8");
 
     return {
@@ -28,7 +28,7 @@ const Home: NextPage<{ post: string }> = (props) => {
         <Layout>
             <Paper
                 sx={{
-                    minHeight: "65vh",
+                    minHeight: "60vh",
                 }}
             >
                 <Box

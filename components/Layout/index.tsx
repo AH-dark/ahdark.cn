@@ -24,11 +24,12 @@ const Layout: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props) => {
                         sx={{
                             pl: 2,
                             pr: 1,
-                            my: 8,
+                            py: 6,
                         }}
                         display={"flex"}
                         flexDirection={"column"}
                         justifyContent={"center"}
+                        minHeight={"100vh"}
                     >
                         {props.children}
                     </Grid>
