@@ -484,6 +484,11 @@
   resolved "https://registry.npmmirror.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
   integrity sha512-WiBSI6JBIhC6LRIsB2Kwh8DsGTlbBU+mLRxJmAe3LjHTdkDpwIbEOZgoXBbZilk/vlfjK8i6nKRAvIRn1XaIMw==
 
+"@socialgouv/matomo-next@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.npmmirror.com/@socialgouv/matomo-next/-/matomo-next-1.3.0.tgz#6f55b51c75582d9504f3e008339437deb1dd0d26"
+  integrity sha512-1EWGFre4CudvcJPIaLYyAwHsGk8mMK5/IKztEIaU14uUifv117dlIJmcpJIVEow70AMY1VqRHh1x5z7Dx+H7dQ==
+
 "@types/crypto-js@^4.1.1":
   version "4.1.1"
   resolved "https://registry.npmmirror.com/@types/crypto-js/-/crypto-js-4.1.1.tgz#602859584cecc91894eb23a4892f38cfa927890d"

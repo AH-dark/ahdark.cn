@@ -7,9 +7,10 @@ import { useAppSelector } from "../redux/hooks";
 import React, { useEffect } from "react";
 import Head from "next/head";
 import config from "../config";
+import { SnackbarProvider } from "notistack";
+import * as Matomo from "@socialgouv/matomo-next";
 import "@fontsource/roboto";
 import "@fontsource/noto-sans-sc";
-import { SnackbarProvider } from "notistack";
 import avatar from "../source/images/avatar.png";
 import favicon from "../source/images/favicon.png";
 
@@ -36,6 +37,12 @@ const theme = createTheme({
 });
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+    useEffect(() => {
+        if (typeof config.matomo !== "undefined") {
+            Matomo.init(config.matomo);
+        }
+    }, []);
+
     const title = useAppSelector((state) => state.viewUpdate.title);
 
     useEffect(() => {

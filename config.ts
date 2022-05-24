@@ -1,4 +1,6 @@
-const config = {
+import Config from "./model/config";
+
+const config: Config = {
     siteName: "AHdark's Profile",
     owner: {
         name: "AHdark",
@@ -11,6 +13,10 @@ const config = {
     },
     CDN: {
         gravatar: "avatar.sourcegcdn.com",
+    },
+    matomo: {
+        url: "https://stat.ahdark.com",
+        siteId: "18",
     },
 };
 

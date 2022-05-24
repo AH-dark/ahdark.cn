@@ -10,7 +10,12 @@ const Avatar = (email: string, size: number = 80) => {
 
     const url = new URL(`https://www.gravatar.com/avatar/${md5}?s=${size}`);
 
-    url.hostname = config.CDN.gravatar;
+    if (
+        typeof config.CDN !== "undefined" &&
+        typeof config.CDN.gravatar !== "undefined"
+    ) {
+        url.hostname = config.CDN.gravatar;
+    }
 
     return url.href;
 };
