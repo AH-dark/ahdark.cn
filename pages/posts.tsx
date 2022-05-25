@@ -22,7 +22,7 @@ import ChromeReaderModeRoundedIcon from "@mui/icons-material/ChromeReaderModeRou
 const Home: NextPage = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {
-        dispatch(setTitle("Home"));
+        dispatch(setTitle("Posts"));
     }, [dispatch]);
 
     const [page, setPage] = useState(1);
@@ -35,9 +35,19 @@ const Home: NextPage = () => {
                     minHeight: "60vh",
                 }}
             >
+                <Typography
+                    variant={"h4"}
+                    component={"h1"}
+                    mt={2}
+                    align={"center"}
+                    noWrap
+                >
+                    {"Posts"}
+                </Typography>
                 <List
                     sx={{
-                        height: "100%",
+                        px: 1,
+                        mb: 2,
                     }}
                 >
                     {!isError ? (

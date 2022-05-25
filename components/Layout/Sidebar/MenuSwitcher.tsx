@@ -19,7 +19,7 @@ const MenuSwitcher: React.FC = () => {
         <Box
             component={"div"}
             position={"fixed"}
-            top={"1%"}
+            top={".8em"}
             left={open ? -128 : 0}
             padding={0}
             sx={{
