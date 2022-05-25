@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, CssBaseline, Grid } from "@mui/material";
 import Sidebar from "~/components/Layout/Sidebar";
+import Background from "~/components/Layout/Background";
 
 const Layout: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props) => {
     return (
@@ -35,6 +36,7 @@ const Layout: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props) => {
                     </Grid>
                 </Grid>
             </Container>
+            <Background />
         </>
     );
 };
