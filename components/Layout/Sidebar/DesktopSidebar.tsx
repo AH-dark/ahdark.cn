@@ -21,6 +21,7 @@ const DesktopSidebar: React.FC = () => {
                     pt: 2,
                     pb: 2,
                     minHeight: "50%",
+                    position: "relative",
                 }}
             >
                 <Box
@@ -54,20 +55,22 @@ const DesktopSidebar: React.FC = () => {
                         {config.owner.description}
                     </Typography>
                 </Box>
-                <Box width={"100%"} height={"100%"}>
+                <Box width={"100%"} pb={2}>
                     <MenuList />
                 </Box>
+                <Box position={"absolute"} bottom={0.5} width={"100%"} mb={1}>
+                    <Typography
+                        variant={"body2"}
+                        component={"div"}
+                        color={"text.secondary"}
+                        align={"center"}
+                        noWrap
+                        mt={1}
+                    >
+                        {"Copyright © 2022 AHdark"}
+                    </Typography>
+                </Box>
             </Paper>
-            <Typography
-                variant={"body2"}
-                component={"div"}
-                color={"text.secondary"}
-                align={"center"}
-                noWrap
-                mt={1}
-            >
-                {"Copyright © 2022 AHdark"}
-            </Typography>
         </Box>
     );
 };
