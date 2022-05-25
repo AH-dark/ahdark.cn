@@ -1,11 +1,14 @@
 import type { NextPage } from "next";
 import {
+    Box,
+    CircularProgress,
     IconButton,
     List,
     ListItem,
     ListItemSecondaryAction,
     ListItemText,
     Paper,
+    Typography,
 } from "@mui/material";
 import Layout from "~/components/Layout";
 import { useAppDispatch } from "~/redux/hooks";
@@ -23,7 +26,7 @@ const Home: NextPage = () => {
     }, [dispatch]);
 
     const [page, setPage] = useState(1);
-    const { data } = useListPostsQuery(page);
+    const { data, isLoading, isFetching, isError } = useListPostsQuery(page);
 
     return (
         <Layout>
@@ -37,33 +40,62 @@ const Home: NextPage = () => {
                         height: "100%",
                     }}
                 >
-                    {typeof data !== "undefined" &&
-                        data.map((item: WP_REST_API_Post, index) => (
-                            <ListItem key={index} component={"article"}>
-                                <ListItemText
-                                    primary={item.title.rendered}
-                                    secondary={
-                                        !item.excerpt.protected
-                                            ? HtmlToText.convert(
-                                                  item.excerpt.rendered
-                                              )
-                                            : undefined
-                                    }
-                                    sx={{
-                                        mr: 1,
-                                    }}
-                                />
-                                <ListItemSecondaryAction>
-                                    <IconButton
-                                        href={item.link}
-                                        target={"_blank"}
-                                        rel={"noopener self"}
-                                    >
-                                        <ChromeReaderModeRoundedIcon />
-                                    </IconButton>
-                                </ListItemSecondaryAction>
-                            </ListItem>
-                        ))}
+                    {!isError ? (
+                        typeof data !== "undefined" &&
+                        !isLoading &&
+                        !isFetching ? (
+                            data.map((item: WP_REST_API_Post, index) => (
+                                <ListItem key={index} component={"article"}>
+                                    <ListItemText
+                                        primary={item.title.rendered}
+                                        secondary={
+                                            !item.excerpt.protected
+                                                ? HtmlToText.convert(
+                                                      item.excerpt.rendered
+                                                  )
+                                                : undefined
+                                        }
+                                        sx={{
+                                            mr: 1,
+                                        }}
+                                    />
+                                    <ListItemSecondaryAction>
+                                        <IconButton
+                                            href={item.link}
+                                            target={"_blank"}
+                                            rel={"noopener self"}
+                                        >
+                                            <ChromeReaderModeRoundedIcon />
+                                        </IconButton>
+                                    </ListItemSecondaryAction>
+                                </ListItem>
+                            ))
+                        ) : (
+                            <Box
+                                width={"100%"}
+                                height={"100%"}
+                                display={"flex"}
+                                flexDirection={"column"}
+                                justifyContent={"center"}
+                                alignItems={"center"}
+                            >
+                                <CircularProgress />
+                            </Box>
+                        )
+                    ) : (
+                        <Box
+                            width={"100%"}
+                            height={"100%"}
+                            display={"flex"}
+                            flexDirection={"column"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                        >
+                            <Typography variant={"body1"} width={"90%"}>
+                                {"Error."}
+                            </Typography>
+                        </Box>
+                    )}
                 </List>
             </Paper>
         </Layout>
