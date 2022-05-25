@@ -2,8 +2,8 @@ import * as React from "react";
 import ReactMarkdown from "markdown-to-jsx";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import MarkdownListItem from "./MarkdownListItem";
-import CodeCustom from "./CodeCustom";
+import MarkdownListItem from "~/components/Markdown/MarkdownListItem";
+import CodeCustom from "~/components/Markdown/CodeCustom";
 
 const options = {
     overrides: {

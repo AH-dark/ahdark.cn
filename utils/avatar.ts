@@ -1,5 +1,5 @@
 import cryptoJs from "crypto-js";
-import config from "../config";
+import config from "~/config";
 
 const Avatar = (email: string, size: number = 80) => {
     const md5 = cryptoJs.MD5(email.trim());

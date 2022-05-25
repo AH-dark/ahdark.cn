@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, CssBaseline, Grid } from "@mui/material";
-import Sidebar from "../Sidebar";
+import Sidebar from "~/components/Layout/Sidebar";
 
 const Layout: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props) => {
     return (

@@ -1,4 +1,4 @@
-import Config from "./model/config";
+import Config from "~/model/config";
 
 const config: Config = {
     siteName: "AHdark's Profile",

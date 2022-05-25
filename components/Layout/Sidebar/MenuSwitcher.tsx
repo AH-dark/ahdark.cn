@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/MenuRounded";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { setSidebarOpen } from "../../redux/reducers/viewUpdate";
+import { useAppDispatch, useAppSelector } from "~/redux/hooks";
+import { setSidebarOpen } from "~/redux/reducers/viewUpdate";
 
 const MenuSwitcher: React.FC = () => {
     const dispatch = useAppDispatch();

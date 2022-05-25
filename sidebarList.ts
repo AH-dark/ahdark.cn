@@ -1,4 +1,4 @@
-import SidebarItem from "./model/sidebarItem";
+import SidebarItem from "~/model/sidebarItem";
 import HomeIcon from "@mui/icons-material/HomeRounded";
 import WorkIcon from "@mui/icons-material/WorkRounded";
 import ArticleRoundedIcon from "@mui/icons-material/ArticleRounded";

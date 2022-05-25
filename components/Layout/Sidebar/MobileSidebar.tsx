@@ -7,10 +7,10 @@ import {
     Typography,
 } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeftRounded";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import MenuList from "./MenuList";
-import { setSidebarOpen } from "../../redux/reducers/viewUpdate";
-import config from "../../config";
+import { useAppDispatch, useAppSelector } from "~/redux/hooks";
+import MenuList from "~/components/Layout/Sidebar/MenuList";
+import { setSidebarOpen } from "~/redux/reducers/viewUpdate";
+import config from "~/config";
 
 const MobileSidebar: React.FC = () => {
     const dispatch = useAppDispatch();

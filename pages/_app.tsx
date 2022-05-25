@@ -1,18 +1,18 @@
 import type { AppProps } from "next/app";
-import wrapper from "../redux/wrapper";
+import wrapper from "~/redux/wrapper";
 import { CacheProvider } from "@emotion/react";
 import { createTheme, GlobalStyles, ThemeProvider } from "@mui/material";
 import createCache from "@emotion/cache";
-import { useAppSelector } from "../redux/hooks";
+import { useAppSelector } from "~/redux/hooks";
 import React, { useEffect } from "react";
 import Head from "next/head";
-import config from "../config";
+import config from "~/config";
 import { SnackbarProvider } from "notistack";
 import * as Matomo from "@socialgouv/matomo-next";
 import "@fontsource/roboto";
 import "@fontsource/noto-sans-sc";
-import avatar from "../source/images/avatar.png";
-import favicon from "../source/images/favicon.png";
+import avatar from "~/source/images/avatar.png";
+import favicon from "~/source/images/favicon.png";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();

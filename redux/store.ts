@@ -1,8 +1,8 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
-import viewUpdate from "./reducers/viewUpdate";
-import hydrate from "./reducers/hydrate";
-import WpData from "./services/wpData";
+import viewUpdate from "~/redux/reducers/viewUpdate";
+import hydrate from "~/redux/reducers/hydrate";
+import WpData from "~/redux/services/wpData";
 
 const store = () =>
     configureStore({

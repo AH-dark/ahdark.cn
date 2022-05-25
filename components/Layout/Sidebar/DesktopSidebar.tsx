@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Paper, Typography } from "@mui/material";
-import config from "../../config";
-import MenuList from "./MenuList";
+import config from "~/config";
+import MenuList from "~/components/Layout/Sidebar/MenuList";
 import Image from "next/image";
-import avatar from "../../source/images/avatar.png";
+import avatar from "~/source/images/avatar.png";
 
 const DesktopSidebar: React.FC = () => {
     return (

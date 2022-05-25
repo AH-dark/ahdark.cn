@@ -6,11 +6,11 @@ import {
     ListItemText,
 } from "@mui/material";
 import { useRouter } from "next/router";
-import sidebarList from "../../sidebarList";
+import sidebarList from "~/sidebarList";
 import { useSnackbar } from "notistack";
-import SidebarItem from "../../model/sidebarItem";
-import { useAppDispatch } from "../../redux/hooks";
-import { setSidebarOpen } from "../../redux/reducers/viewUpdate";
+import SidebarItem from "~/model/sidebarItem";
+import { useAppDispatch } from "~/redux/hooks";
+import { setSidebarOpen } from "~/redux/reducers/viewUpdate";
 
 const MenuList: React.FC = () => {
     const router = useRouter();
