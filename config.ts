@@ -1,5 +1,11 @@
 import Config from "~/model/config";
-import { faTelegram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+    faGithub,
+    faQq,
+    faTelegram,
+    faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 const config: Config = {
     siteName: "AHdark's Profile",
@@ -27,9 +33,24 @@ const config: Config = {
             href: "https://twitter.com/AHdark_0428",
         },
         {
-            name: "Telegram",
+            name: "Telegram Channel",
             icon: faTelegram,
-            href: "https://t.me/AH_dark",
+            href: "https://t.me/AHdark_Channel",
+        },
+        {
+            name: "QQ Group",
+            icon: faQq,
+            href: "https://qm.qq.com/cgi-bin/qm/qr?k=XDOyNPtPKGZUzehqlXCCtav80T5sZtcP&jump_from=webapi",
+        },
+        {
+            name: "GitHub",
+            icon: faGithub,
+            href: "https://github.com/AH-dark",
+        },
+        {
+            name: "Email",
+            icon: faEnvelope,
+            href: "mailto:ahdark@outlook.com",
         },
     ],
 };
