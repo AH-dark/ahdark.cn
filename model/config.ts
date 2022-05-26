@@ -1,3 +1,6 @@
+import ListItem from "~/model/listItem";
+import { IconDefinition } from "@fortawesome/free-regular-svg-icons";
+
 export default interface Config {
     siteName: string;
     owner: {
@@ -19,4 +22,5 @@ export default interface Config {
         excludeUrlsPatterns?: RegExp[];
     };
     wordpress: string;
+    social?: ListItem<IconDefinition>[];
 }

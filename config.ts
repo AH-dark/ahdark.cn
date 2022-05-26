@@ -1,11 +1,12 @@
 import Config from "~/model/config";
+import { faTelegram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const config: Config = {
     siteName: "AHdark's Profile",
     owner: {
         name: "AHdark",
         email: "ahdark@outlook.com",
-        description: "废物小蒟蒻",
+        description: "I have poor ability.",
     },
     SEO: {
         description:
@@ -19,6 +20,18 @@ const config: Config = {
         siteId: "18",
     },
     wordpress: "https://ahdark.com/",
+    social: [
+        {
+            name: "Twitter",
+            icon: faTwitter,
+            href: "https://twitter.com/AHdark_0428",
+        },
+        {
+            name: "Telegram",
+            icon: faTelegram,
+            href: "https://t.me/AH_dark",
+        },
+    ],
 };
 
 export default config;

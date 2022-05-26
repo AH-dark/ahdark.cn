@@ -8,7 +8,7 @@ import {
 import { useRouter } from "next/router";
 import sidebarList from "~/sidebarList";
 import { useSnackbar } from "notistack";
-import SidebarItem from "~/model/sidebarItem";
+import ListItem from "~/model/listItem";
 import { useAppDispatch } from "~/redux/hooks";
 import { setSidebarOpen } from "~/redux/reducers/viewUpdate";
 
@@ -17,7 +17,7 @@ const MenuList: React.FC = () => {
     const { enqueueSnackbar } = useSnackbar();
     const dispatch = useAppDispatch();
 
-    const handleRedirect = (item: SidebarItem) => (e: React.MouseEvent) => {
+    const handleRedirect = (item: ListItem) => (e: React.MouseEvent) => {
         e.preventDefault();
         if (item.href.startsWith("/")) {
             dispatch(setSidebarOpen(false));

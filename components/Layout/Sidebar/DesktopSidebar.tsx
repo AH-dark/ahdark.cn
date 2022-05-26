@@ -1,9 +1,10 @@
 import React from "react";
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, IconButton, Paper, Tooltip, Typography } from "@mui/material";
 import config from "~/config";
 import MenuList from "~/components/Layout/Sidebar/MenuList";
 import Image from "next/image";
 import avatar from "~/source/images/avatar.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const DesktopSidebar: React.FC = () => {
     return (
@@ -54,6 +55,38 @@ const DesktopSidebar: React.FC = () => {
                     >
                         {config.owner.description}
                     </Typography>
+                    {typeof config.social !== "undefined" && (
+                        <Box
+                            display={"flex"}
+                            flexDirection={"row"}
+                            alignItems={"center"}
+                        >
+                            {config.social.map((item, index) => (
+                                <Box key={index} mt={0.5}>
+                                    <Tooltip
+                                        title={item.name.toLowerCase()}
+                                        arrow
+                                    >
+                                        <IconButton
+                                            size={"medium"}
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                window.open(item.href);
+                                            }}
+                                            href={item.href}
+                                            target={"_blank"}
+                                            rel={"noreferrer"}
+                                        >
+                                            <FontAwesomeIcon
+                                                icon={item.icon}
+                                                size={"xs"}
+                                            />
+                                        </IconButton>
+                                    </Tooltip>
+                                </Box>
+                            ))}
+                        </Box>
+                    )}
                 </Box>
                 <Box width={"100%"} pb={2}>
                     <MenuList />
