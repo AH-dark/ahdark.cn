@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import backgroundImage from "~/source/images/background.jpg";
+import backgroundImage from "~/source/images/background.webp";
 
 const Background: React.FC = () => (
     <Box
