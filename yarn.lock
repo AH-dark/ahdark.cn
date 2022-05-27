@@ -2691,10 +2691,10 @@ word-wrap@^1.2.3:
   resolved "https://registry.npmmirror.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
   integrity sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
 
-wp-types@^3.59.1:
-  version "3.59.1"
-  resolved "https://registry.npmmirror.com/wp-types/-/wp-types-3.59.1.tgz#c180f58d1c4cbdbbe7e4a476fd46efacea7e1f63"
-  integrity sha512-CLiNEjIuB7vJFHd+028HxNq7acTgeTtgNClbUXRlUA04DPZ2j3xP6WIGelnVD1nNVytZ96RpmOoWh5IMieau3Q==
+wp-types@^3.60.0:
+  version "3.60.0"
+  resolved "https://registry.yarnpkg.com/wp-types/-/wp-types-3.60.0.tgz#252deaf217c0523e6dd6ce89dd545ce0ef1c4172"
+  integrity sha512-DVIg+eQJYiixXIP6u2G+7mjjT8SvHj3UB02WTz91x1ejFv/4+pXu7IRb4m6IrOL3/hDw5EreUyp0y4OF4CsesQ==
   dependencies:
     typescript ">=3"
 
