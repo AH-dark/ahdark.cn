@@ -14,7 +14,6 @@ import MenuList from "~/components/Layout/Sidebar/MenuList";
 import { setSidebarOpen } from "~/redux/reducers/viewUpdate";
 import config from "~/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import avatar from "~/source/images/avatar.png";
 
 const MobileSidebar: React.FC = () => {
@@ -56,15 +55,13 @@ const MobileSidebar: React.FC = () => {
                     alignItems={"center"}
                     padding={1}
                 >
-                    <Image
-                        src={avatar}
-                        style={{
-                            borderRadius: "50%",
-                        }}
+                    <Box
+                        component={"img"}
+                        src={avatar.src}
                         alt={"avatar"}
                         height={64}
                         width={64}
-                        priority
+                        borderRadius={"50%"}
                     />
                     <Box pl={2}>
                         <Typography variant={"h5"} component={"div"}>

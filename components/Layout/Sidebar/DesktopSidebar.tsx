@@ -2,7 +2,6 @@ import React from "react";
 import { Box, IconButton, Paper, Tooltip, Typography } from "@mui/material";
 import config from "~/config";
 import MenuList from "~/components/Layout/Sidebar/MenuList";
-import Image from "next/image";
 import avatar from "~/source/images/avatar.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -34,15 +33,13 @@ const DesktopSidebar: React.FC = () => {
                     pb={1}
                 >
                     <Box marginTop={2} marginBottom={1}>
-                        <Image
-                            src={avatar}
-                            style={{
-                                borderRadius: "50%",
-                            }}
+                        <Box
+                            component={"img"}
+                            src={avatar.src}
                             alt={"avatar"}
                             height={96}
                             width={96}
-                            priority
+                            borderRadius={"50%"}
                         />
                     </Box>
                     <Typography variant={"h5"} component={"div"}>
