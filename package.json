@@ -12,7 +12,7 @@
     "@emotion/react": "^11.9.0",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
-    "@fontsource/jetbrains-mono": "^4.5.8",
+    "@fontsource/jetbrains-mono": "^4.5.9",
     "@fontsource/noto-sans-sc": "^4.5.10",
     "@fontsource/roboto": "^4.5.7",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
