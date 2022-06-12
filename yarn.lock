@@ -224,10 +224,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fontsource/jetbrains-mono@^4.5.8":
-  version "4.5.8"
-  resolved "https://registry.npmmirror.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.8.tgz#cd1613ec7ca4ab4a7f3e4b07a2eeb4ae9e89611b"
-  integrity sha512-Wp2oUcXNFqw7pwEZdstZLv09v8lWhMscuSbmPU8VpdxPpC+kbQb6u0sOF/wZX/GZcwJHZyXBaZan0iia16r30Q==
+"@fontsource/jetbrains-mono@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.9.tgz#792bcd574f42a0602cc04bfef39e11058d0ca217"
+  integrity sha512-qgzRg1dYIPyAOTp1XR6RkDOlNt4o6LVAe9PXR68hQzbwd1xf0S86TWEzNFSL82do8weF/G2ubo4TGxrNKo9D1A==
 
 "@fontsource/noto-sans-sc@^4.5.10":
   version "4.5.10"
@@ -344,14 +344,14 @@
     react-transition-group "^4.4.2"
     rifm "^0.12.1"
 
-"@mui/material@^5.8.2":
-  version "5.8.2"
-  resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.8.2.tgz#13547df6bb6991e064f42ee71ce17c30629e263a"
-  integrity sha512-w/A1KG9Czf42uTyJOiRU5U1VullOz1R3xcsBvv3BtKCCWdVP+D6v/Yb8v0tJpIixMEbjeWzWGjotQBU0nd+yNA==
+"@mui/material@^5.8.3":
+  version "5.8.3"
+  resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.8.3.tgz#86681d14c1a119d1d9b6b981c864736d075d095f"
+  integrity sha512-8UecY/W9SMtEZm5PMCUcMbujajVP6fobu0BgBPiIWwwWRblZVEzqprY6v1P2me7qCyrve4L4V/rqAKPKhVHOSg==
   dependencies:
     "@babel/runtime" "^7.17.2"
-    "@mui/base" "5.0.0-alpha.83"
-    "@mui/system" "^5.8.2"
+    "@mui/base" "5.0.0-alpha.84"
+    "@mui/system" "^5.8.3"
     "@mui/types" "^7.1.3"
     "@mui/utils" "^5.8.0"
     "@types/react-transition-group" "^4.4.4"
@@ -574,10 +574,10 @@
   resolved "https://registry.npmmirror.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
-"@types/node@17.0.40":
-  version "17.0.40"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.40.tgz#76ee88ae03650de8064a6cf75b8d95f9f4a16090"
-  integrity sha512-UXdBxNGqTMtm7hCwh9HtncFVLrXoqA3oJW30j6XWp5BH/wu3mVeaxo7cq5benFdBw34HB3XDT2TRPI7rXZ+mDg==
+"@types/node@17.0.41":
+  version "17.0.41"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.41.tgz#1607b2fd3da014ae5d4d1b31bc792a39348dfb9b"
+  integrity sha512-xA6drNNeqb5YyV5fO3OAEsnXLfO7uF0whiOfPTz5AeDo8KeZFmODKnvwPymMNO8qE/an8pVY/O50tig2SQCrGw==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
