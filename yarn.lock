@@ -328,15 +328,15 @@
   dependencies:
     "@babel/runtime" "^7.17.2"
 
-"@mui/lab@^5.0.0-alpha.85":
-  version "5.0.0-alpha.85"
-  resolved "https://registry.yarnpkg.com/@mui/lab/-/lab-5.0.0-alpha.85.tgz#e7f5f2530b66151d508dc23d4d9848953e6e5b1b"
-  integrity sha512-GaPl5azVXr9dbwZe1DiKr3GO9Bg3nbZ48oRTDZoMxWYMB8dm4f73GrY2Sv1Sf03z19YzlD7Ixskr6rGcKGPWlw==
+"@mui/lab@^5.0.0-alpha.88":
+  version "5.0.0-alpha.88"
+  resolved "https://registry.yarnpkg.com/@mui/lab/-/lab-5.0.0-alpha.88.tgz#bead71c8153135e45f2268ef804dbfea92638c38"
+  integrity sha512-YS2NPw0D0CHG9z9Y6Wjocl3g2LNzdXdkvORPoyc05ea9Xm+m8buddvMeTuL/r/e3S7yLK8HOMN2uHE0rwD/oVQ==
   dependencies:
     "@babel/runtime" "^7.17.2"
-    "@mui/base" "5.0.0-alpha.84"
-    "@mui/system" "^5.8.3"
-    "@mui/utils" "^5.8.0"
+    "@mui/base" "5.0.0-alpha.87"
+    "@mui/system" "^5.8.6"
+    "@mui/utils" "^5.8.6"
     "@mui/x-date-pickers" "5.0.0-alpha.1"
     clsx "^1.1.1"
     prop-types "^15.8.1"
