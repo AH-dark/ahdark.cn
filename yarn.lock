@@ -265,20 +265,6 @@
   resolved "https://registry.npmmirror.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@mui/base@5.0.0-alpha.89":
-  version "5.0.0-alpha.89"
-  resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.89.tgz#d72681fa20e05297b426e113c47a0912b59c8b44"
-  integrity sha512-2g18hzt947qQ3gQQPOPEBfzQmaT2wafVhyJ7ZOZXeU6kKb88MdlHoPkK2lKXCHMBtRGnnsiF36j0rmhQXu0I5g==
-  dependencies:
-    "@babel/runtime" "^7.17.2"
-    "@emotion/is-prop-valid" "^1.1.3"
-    "@mui/types" "^7.1.4"
-    "@mui/utils" "^5.9.0"
-    "@popperjs/core" "^2.11.5"
-    clsx "^1.2.1"
-    prop-types "^15.8.1"
-    react-is "^18.2.0"
-
 "@mui/base@5.0.0-alpha.93":
   version "5.0.0-alpha.93"
   resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.93.tgz#b13310ee4bbf423ae74f1a82befd57469778fa9f"
@@ -305,15 +291,15 @@
   dependencies:
     "@babel/runtime" "^7.17.2"
 
-"@mui/lab@^5.0.0-alpha.90":
-  version "5.0.0-alpha.90"
-  resolved "https://registry.yarnpkg.com/@mui/lab/-/lab-5.0.0-alpha.90.tgz#c70549f2c398a5c5e41755de22c1e18c9e470d77"
-  integrity sha512-9ze3cIo5OU7XSdB/FaV6JHJlFfyg2MpedakDHcFncoZRL2vvKJas3NOBaLKKxNN360RdUiUbHJZzKcCOyhQJug==
+"@mui/lab@^5.0.0-alpha.95":
+  version "5.0.0-alpha.95"
+  resolved "https://registry.yarnpkg.com/@mui/lab/-/lab-5.0.0-alpha.95.tgz#e710ed713fb58ec2aa216096d34cc577fac0068f"
+  integrity sha512-JdJKhn0qJjk0ejtmsiZ/8e08uUzr8MZsASGbmY2VbGC7WlCntgjZrWmhuvQf3hWCtSfuD6tbCdPpz6A2NL5nVQ==
   dependencies:
     "@babel/runtime" "^7.17.2"
-    "@mui/base" "5.0.0-alpha.89"
-    "@mui/system" "^5.9.0"
-    "@mui/utils" "^5.9.0"
+    "@mui/base" "5.0.0-alpha.93"
+    "@mui/system" "^5.10.1"
+    "@mui/utils" "^5.9.3"
     clsx "^1.2.1"
     prop-types "^15.8.1"
     react-is "^18.2.0"
@@ -355,7 +341,7 @@
     csstype "^3.1.0"
     prop-types "^15.8.1"
 
-"@mui/system@^5.10.1", "@mui/system@^5.9.0":
+"@mui/system@^5.10.1":
   version "5.10.1"
   resolved "https://registry.yarnpkg.com/@mui/system/-/system-5.10.1.tgz#737cc9c703083ff14b4434ba72227522be4659bf"
   integrity sha512-Ix8LVAMtVrNtmncK0yc5llHWlZKCm9okbw8QMnWbI5UH+nI9qhtf+Aure4p5ei6dGKdil++lukar/GxCjfzRSg==
@@ -369,12 +355,12 @@
     csstype "^3.1.0"
     prop-types "^15.8.1"
 
-"@mui/types@^7.1.4", "@mui/types@^7.1.5":
+"@mui/types@^7.1.5":
   version "7.1.5"
   resolved "https://registry.yarnpkg.com/@mui/types/-/types-7.1.5.tgz#5e5cc49d719bc86522983359bc1f90eddcff0624"
   integrity sha512-HnRXrxgHJYJcT8ZDdDCQIlqk0s0skOKD7eWs9mJgBUu70hyW4iA6Kiv3yspJR474RFH8hysKR65VVSzUSzkuwA==
 
-"@mui/utils@^5.9.0", "@mui/utils@^5.9.3":
+"@mui/utils@^5.9.3":
   version "5.9.3"
   resolved "https://registry.yarnpkg.com/@mui/utils/-/utils-5.9.3.tgz#a11e0824f00b7ea40257b390060ce167fe861d02"
   integrity sha512-l0N5bcrenE9hnwZ/jPecpIRqsDFHkPXoFUcmkgysaJwVZzJ3yQkGXB47eqmXX5yyGrSc6HksbbqXEaUya+siew==
@@ -482,11 +468,6 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
-
-"@popperjs/core@^2.11.5":
-  version "2.11.5"
-  resolved "https://registry.npmmirror.com/@popperjs/core/-/core-2.11.5.tgz#db5a11bf66bdab39569719555b0f76e138d7bd64"
-  integrity sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==
 
 "@popperjs/core@^2.11.6":
   version "2.11.6"
