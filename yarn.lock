@@ -196,10 +196,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.9.tgz#792bcd574f42a0602cc04bfef39e11058d0ca217"
   integrity sha512-qgzRg1dYIPyAOTp1XR6RkDOlNt4o6LVAe9PXR68hQzbwd1xf0S86TWEzNFSL82do8weF/G2ubo4TGxrNKo9D1A==
 
-"@fontsource/noto-sans-sc@^4.5.10":
-  version "4.5.10"
-  resolved "https://registry.npmmirror.com/@fontsource/noto-sans-sc/-/noto-sans-sc-4.5.10.tgz#526d10dbfe98f981024a5f2500941f817ee92a93"
-  integrity sha512-bLLu4nXaJgHjrB4gXmEFhuuPlpZw5u2TosC6eikkDy2gRYIJnmYD63fo4oQvgN8JONX/dgIy5EIpg3iQWqltyg==
+"@fontsource/noto-sans-sc@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans-sc/-/noto-sans-sc-4.5.11.tgz#fdd8b8f69a57b92f452ba86b4f5f51e9e1fd7b3b"
+  integrity sha512-tufdVgKpP2PqhPpk8Wu6nKF8RCe7nKU0lpKm2uWtqmFE0GN5n+Xq/H6UL7ssRNUvDTHffBHIlGB4T7iYXAutgw==
 
 "@fontsource/roboto@^4.5.7":
   version "4.5.7"
