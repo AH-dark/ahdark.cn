@@ -22,5 +22,5 @@ const api = createApi({
     }),
 });
 
-export const { useListPostsQuery } = api;
+export const { useListPostsQuery, usePrefetch } = api;
 export default api;

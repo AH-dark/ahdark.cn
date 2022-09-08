@@ -60,10 +60,7 @@ const DesktopSidebar: React.FC = () => {
                         >
                             {config.social.map((item, index) => (
                                 <Box key={index} mt={0.5}>
-                                    <Tooltip
-                                        title={item.name.toLowerCase()}
-                                        arrow
-                                    >
+                                    <Tooltip title={item.name} arrow>
                                         <IconButton
                                             size={"medium"}
                                             onClick={(e) => {
