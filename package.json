@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=7.0.0"
+  },
   "dependencies": {
     "@babel/core": "^7.19.0",
     "@emotion/cache": "^11.10.3",
@@ -43,6 +47,7 @@
     "react-dom": "18.2.0",
     "react-redux": "^8.0.2",
     "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
     "wp-types": "^3.60.0"
   },
   "devDependencies": {
