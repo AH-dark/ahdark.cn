@@ -17,6 +17,7 @@ specifiers:
   '@mui/icons-material': ^5.10.3
   '@mui/lab': ^5.0.0-alpha.98
   '@mui/material': ^5.10.4
+  '@mui/types': ^7.2.0
   '@reduxjs/toolkit': ^1.8.5
   '@socialgouv/matomo-next': ^1.4.0
   '@types/crypto-js': ^4.1.1
@@ -62,6 +63,7 @@ dependencies:
   '@mui/icons-material': 5.10.3_4snb3myyacjjbapu2oqpdv4q6q
   '@mui/lab': 5.0.0-alpha.98_uvneo4awg6zfdoj3xlz76iqs4m
   '@mui/material': 5.10.4_njmfh6tqiikqhlkdqi5f76pbxy
+  '@mui/types': 7.2.0_@types+react@18.0.15
   '@reduxjs/toolkit': 1.8.5_kkwg4cbsojnjnupd3btipussee
   '@socialgouv/matomo-next': 1.4.0_next@12.2.5
   '@types/crypto-js': 4.1.1
