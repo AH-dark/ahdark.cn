@@ -4,7 +4,7 @@ specifiers:
   '@emotion/react': ^11.10.4
   '@emotion/server': ^11.10.0
   '@emotion/styled': ^11.10.4
-  '@fontsource/jetbrains-mono': ^4.5.9
+  '@fontsource/jetbrains-mono': ^4.5.10
   '@fontsource/noto-sans-sc': ^4.5.11
   '@fontsource/roboto': ^4.5.7
   '@fortawesome/fontawesome-svg-core': ^6.1.1
@@ -46,7 +46,7 @@ dependencies:
   '@emotion/react': 11.10.4_3hx2ussxxho4jajbwrd6gq34qe
   '@emotion/server': 11.10.0
   '@emotion/styled': 11.10.4_rhtmf2tdznvn5l5l4wmowmke4e
-  '@fontsource/jetbrains-mono': 4.5.9
+  '@fontsource/jetbrains-mono': 4.5.10
   '@fontsource/noto-sans-sc': 4.5.11
   '@fontsource/roboto': 4.5.7
   '@fortawesome/fontawesome-svg-core': 6.1.1
@@ -314,8 +314,8 @@ packages:
       - supports-color
     dev: true
 
-  /@fontsource/jetbrains-mono/4.5.9:
-    resolution: {integrity: sha512-qgzRg1dYIPyAOTp1XR6RkDOlNt4o6LVAe9PXR68hQzbwd1xf0S86TWEzNFSL82do8weF/G2ubo4TGxrNKo9D1A==}
+  /@fontsource/jetbrains-mono/4.5.10:
+    resolution: {integrity: sha512-dylbkBmAWL0fkjDpDoDbQCwTQ/W3DzLtVXmwGyAyttfKliPGSP2WpAmmMFYp9NpqFMF7CLprFyzppe8u39Orkw==}
     dev: false
 
   /@fontsource/noto-sans-sc/4.5.11:
