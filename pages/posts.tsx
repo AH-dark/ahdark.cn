@@ -1,23 +1,23 @@
+import React, { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import {
     Box,
-    CircularProgress,
     IconButton,
     List,
     ListItem,
     ListItemSecondaryAction,
     ListItemText,
+    Pagination,
     Paper,
     Typography,
 } from "@mui/material";
 import Layout from "~/components/Layout";
-import { useAppDispatch } from "~/redux/hooks";
-import { useEffect, useState } from "react";
-import { setTitle } from "~/redux/reducers/viewUpdate";
-import { useListPostsQuery } from "~/redux/services/wpData";
+import { useAppDispatch } from "~/store";
+import { setTitle } from "~/store/reducers/viewUpdate";
 import { WP_REST_API_Post } from "wp-types";
 import * as HtmlToText from "html-to-text";
 import ChromeReaderModeRoundedIcon from "@mui/icons-material/ChromeReaderModeRounded";
+import { useListPostsQuery } from "~/store/services/api";
 
 const Home: NextPage = () => {
     const dispatch = useAppDispatch();
@@ -26,7 +26,11 @@ const Home: NextPage = () => {
     }, [dispatch]);
 
     const [page, setPage] = useState(1);
-    const { data, isLoading, isFetching, isError } = useListPostsQuery(page);
+    const [size, setSize] = useState(8);
+    const { data, isError, isSuccess } = useListPostsQuery({
+        page,
+        size,
+    });
 
     return (
         <Layout>
@@ -50,63 +54,64 @@ const Home: NextPage = () => {
                         mb: 2,
                     }}
                 >
-                    {!isError ? (
-                        typeof data !== "undefined" &&
-                        !isLoading &&
-                        !isFetching ? (
-                            data.map((item: WP_REST_API_Post, index) => (
-                                <ListItem key={index} component={"article"}>
-                                    <ListItemText
-                                        primary={item.title.rendered}
-                                        secondary={
-                                            !item.excerpt.protected
-                                                ? HtmlToText.convert(
-                                                      item.excerpt.rendered
-                                                  )
-                                                : undefined
-                                        }
-                                        sx={{
-                                            mr: 1,
-                                        }}
-                                    />
-                                    <ListItemSecondaryAction>
-                                        <IconButton
-                                            href={item.link}
-                                            target={"_blank"}
-                                            rel={"noopener self"}
-                                        >
-                                            <ChromeReaderModeRoundedIcon />
-                                        </IconButton>
-                                    </ListItemSecondaryAction>
-                                </ListItem>
-                            ))
-                        ) : (
-                            <Box
-                                width={"100%"}
-                                height={"100%"}
-                                display={"flex"}
-                                flexDirection={"column"}
-                                justifyContent={"center"}
-                                alignItems={"center"}
-                            >
-                                <CircularProgress />
-                            </Box>
-                        )
-                    ) : (
-                        <Box
-                            width={"100%"}
-                            height={"100%"}
-                            display={"flex"}
-                            flexDirection={"column"}
-                            justifyContent={"center"}
-                            alignItems={"center"}
+                    {isError && (
+                        <Typography
+                            variant={"h6"}
+                            component={"h2"}
+                            mt={2}
+                            align={"center"}
+                            noWrap
                         >
-                            <Typography variant={"body1"} width={"90%"}>
-                                {"Error."}
-                            </Typography>
-                        </Box>
+                            {"Error"}
+                        </Typography>
                     )}
+                    {isSuccess &&
+                        data!.data.map((item: WP_REST_API_Post, index) => (
+                            <ListItem key={index} component={"article"}>
+                                <ListItemText
+                                    primary={item.title.rendered}
+                                    secondary={
+                                        !item.excerpt.protected
+                                            ? HtmlToText.convert(
+                                                  item.excerpt.rendered
+                                              )
+                                            : undefined
+                                    }
+                                    sx={{
+                                        mr: 1,
+                                    }}
+                                />
+                                <ListItemSecondaryAction>
+                                    <IconButton
+                                        href={item.link}
+                                        target={"_blank"}
+                                        rel={"noopener self"}
+                                    >
+                                        <ChromeReaderModeRoundedIcon />
+                                    </IconButton>
+                                </ListItemSecondaryAction>
+                            </ListItem>
+                        ))}
                 </List>
+                <Box
+                    width={"100%"}
+                    mb={1}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    alignItems={"center"}
+                >
+                    <Pagination
+                        count={
+                            (data?.total || 0) % size > 0
+                                ? Math.floor((data?.total || 0) / size) + 1
+                                : (data?.total || 0) / size
+                        }
+                        page={page}
+                        onChange={(e, page) => {
+                            setPage(page);
+                        }}
+                    />
+                </Box>
             </Paper>
         </Layout>
     );

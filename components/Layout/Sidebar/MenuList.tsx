@@ -9,8 +9,8 @@ import { useRouter } from "next/router";
 import sidebarList from "~/sidebarList";
 import { useSnackbar } from "notistack";
 import ListItem from "~/model/listItem";
-import { useAppDispatch } from "~/redux/hooks";
-import { setSidebarOpen } from "~/redux/reducers/viewUpdate";
+import { useAppDispatch } from "~/store";
+import { setSidebarOpen } from "~/store/reducers/viewUpdate";
 
 const MenuList: React.FC = () => {
     const router = useRouter();

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Paper } from "@mui/material";
-import { useAppDispatch, useAppSelector } from "~/redux/hooks";
-import { setSidebarOpen } from "~/redux/reducers/viewUpdate";
+import { useAppDispatch, useAppSelector } from "~/store";
+import { setSidebarOpen } from "~/store/reducers/viewUpdate";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 
 const MenuSwitcher: React.FC = () => {

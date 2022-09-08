@@ -9,9 +9,9 @@ import {
     Typography,
 } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeftRounded";
-import { useAppDispatch, useAppSelector } from "~/redux/hooks";
+import { useAppDispatch, useAppSelector } from "~/store";
 import MenuList from "~/components/Layout/Sidebar/MenuList";
-import { setSidebarOpen } from "~/redux/reducers/viewUpdate";
+import { setSidebarOpen } from "~/store/reducers/viewUpdate";
 import config from "~/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import avatar from "~/source/images/avatar.png";

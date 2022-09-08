@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import type { GetStaticProps, NextPage } from "next";
 import { Box, Paper } from "@mui/material";
 import Layout from "~/components/Layout";
@@ -12,9 +13,8 @@ import {
     TimelineOppositeContent,
     TimelineSeparator,
 } from "@mui/lab";
-import { useAppDispatch } from "~/redux/hooks";
-import { useEffect } from "react";
-import { setTitle } from "~/redux/reducers/viewUpdate";
+import { useAppDispatch } from "~/store";
+import { setTitle } from "~/store/reducers/viewUpdate";
 
 // noinspection JSUnusedGlobalSymbols
 export const getStaticProps: GetStaticProps = async () => {

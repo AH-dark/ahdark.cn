@@ -5,6 +5,7 @@ export interface ViewUpdateState {
     sidebar: {
         open: boolean;
     };
+    loading: boolean;
 }
 
 const initState: ViewUpdateState = {
@@ -12,6 +13,7 @@ const initState: ViewUpdateState = {
     sidebar: {
         open: false,
     },
+    loading: false,
 };
 
 const viewUpdate = createSlice({
@@ -24,8 +26,11 @@ const viewUpdate = createSlice({
         setSidebarOpen(state, action: PayloadAction<boolean>) {
             state.sidebar.open = action.payload;
         },
+        setLoading(state, action: PayloadAction<boolean>) {
+            state.loading = action.payload;
+        },
     },
 });
 
-export const { setTitle, setSidebarOpen } = viewUpdate.actions;
+export const { setTitle, setSidebarOpen, setLoading } = viewUpdate.actions;
 export default viewUpdate.reducer;

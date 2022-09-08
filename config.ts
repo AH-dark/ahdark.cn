@@ -1,11 +1,5 @@
 import Config from "~/model/config";
-import {
-    faGithub,
-    faQq,
-    faTelegram,
-    faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const config: Config = {
     siteName: "AHdark's Profile",
@@ -25,31 +19,31 @@ const config: Config = {
         url: "https://stat.ahdark.com",
         siteId: "18",
     },
-    wordpress: "https://ahdark.com/",
+    wordpress: "https://www.ahdark.com/",
     social: [
         {
             name: "Twitter",
-            icon: faTwitter,
+            icon: brands("twitter"),
             href: "https://twitter.com/AHdark_0428",
         },
         {
             name: "Telegram Channel",
-            icon: faTelegram,
+            icon: brands("telegram"),
             href: "https://t.me/AHdark_Channel",
         },
         {
             name: "QQ Group",
-            icon: faQq,
+            icon: brands("qq"),
             href: "https://qm.qq.com/cgi-bin/qm/qr?k=XDOyNPtPKGZUzehqlXCCtav80T5sZtcP&jump_from=webapi",
         },
         {
             name: "GitHub",
-            icon: faGithub,
+            icon: brands("github"),
             href: "https://github.com/AH-dark",
         },
         {
             name: "Email",
-            icon: faEnvelope,
+            icon: solid("envelope"),
             href: "mailto:ahdark@outlook.com",
         },
     ],

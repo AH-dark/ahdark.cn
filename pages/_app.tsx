@@ -1,16 +1,29 @@
-import type { AppProps } from "next/app";
-import wrapper from "~/redux/wrapper";
-import { CacheProvider } from "@emotion/react";
-import { createTheme, GlobalStyles, ThemeProvider } from "@mui/material";
-import createCache from "@emotion/cache";
-import { useAppSelector } from "~/redux/hooks";
 import React, { useEffect } from "react";
+import type { AppProps } from "next/app";
 import Head from "next/head";
-import config from "~/config";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
+
+// material-ui
+import { createTheme, GlobalStyles, ThemeProvider } from "@mui/material";
 import { SnackbarProvider } from "notistack";
+import Loading from "~/components/Loading";
+
+// redux
+import wrapper from "~/store/wrapper";
+import { useAppSelector } from "~/store";
+
+// config
+import config from "~/config";
 import * as Matomo from "@socialgouv/matomo-next";
+
+// Font Awesome
+import { config as fontAwesomeConfig } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@fontsource/roboto";
 import "@fontsource/noto-sans-sc";
+
+// User styles
 import avatar from "~/source/images/avatar.png";
 import favicon from "~/source/images/favicon.png";
 
@@ -36,6 +49,8 @@ const theme = createTheme({
     typography: {},
 });
 
+fontAwesomeConfig.autoAddCss = false;
+
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     useEffect(() => {
         if (typeof config.matomo !== "undefined") {
@@ -49,6 +64,8 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         window.document.title =
             title !== null ? `${title} - ${config.siteName}` : config.siteName;
     }, [title]);
+
+    const loading = useAppSelector((state) => state.viewUpdate.loading);
 
     return (
         <CacheProvider value={clientSideEmotionCache}>
@@ -87,6 +104,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
                         vertical: "top",
                     }}
                 >
+                    {loading && <Loading />}
                     <Component {...pageProps} />
                 </SnackbarProvider>
             </ThemeProvider>
