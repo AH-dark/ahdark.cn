@@ -74,7 +74,7 @@ const WeekdaysChart: React.FC<Props> = ({ weekdays }) => {
                     (weekday) =>
                         Math.round(
                             weekday.categories.filter(
-                                (v) => v.name === Name.JobCoding
+                                (v) => v.name === Name.Coding
                             )[0]?.average / 36
                         ) / 100 || 0
                 ),

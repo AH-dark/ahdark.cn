@@ -42,7 +42,7 @@ export interface Category {
 }
 
 export enum Name {
-    JobBrowsing = "Browsing",
-    JobCoding = "Coding",
-    JobDebugging = "Debugging",
+    Browsing = "Browsing",
+    Coding = "Coding",
+    Debugging = "Debugging",
 }
