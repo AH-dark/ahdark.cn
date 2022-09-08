@@ -12,9 +12,9 @@
     "@emotion/react": "^11.10.4",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.4",
-    "@fontsource/jetbrains-mono": "^4.5.9",
+    "@fontsource/jetbrains-mono": "^4.5.10",
     "@fontsource/noto-sans-sc": "^4.5.11",
-    "@fontsource/roboto": "^4.5.7",
+    "@fontsource/roboto": "^4.5.8",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
@@ -48,7 +48,7 @@
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "eslint": "8.22.0",
-    "eslint-config-next": "12.2.2",
+    "eslint-config-next": "12.2.5",
     "prettier": "^2.7.1",
     "typescript": "4.7.4"
   }
