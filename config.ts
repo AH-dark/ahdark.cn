@@ -20,6 +20,7 @@ const config: Config = {
         siteId: "18",
     },
     wordpress: "https://www.ahdark.com/",
+    wakatimeToken: process.env.WAKATIME_TOKEN,
     social: [
         {
             name: "Twitter",
