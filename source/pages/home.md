@@ -30,3 +30,17 @@ ability to develop the front-end by the React technology.
 - I love computer science and have been studying for almost 10 years.
 
 **Welcome to my blog: <https://www.ahdark.com>**
+
+## Service
+
+- Globally accelerated image bed service: <https://alpha.sourcegcdn.com>. It can store and share pictures, and the picture storage bucket has been connected to the global acceleration system. Also, it is **free**.
+- <https://www.sourcegcdn.com> is a **free** service that accelerates projects hosted on GitHub, WordPress.org , npm and cdnjs, also includes Gravatar and other projects which will promote the development of Open Source.
+
+## Work
+
+I was working with RoundCloud.
+
+Now I'm working with [Ungine Times Tech.](https://www.ungine.cn), served as Chief Architecture Officer, but not currently holding shares. 
+Our GitHub organization account is [@Ungine Times Technology Co., Ltd.](https://github.com/Ungine-Tech)
+
+Also, I am the main maintainer and investor of the [AlphaPic](https://alpha.sourcegcdn.com) image hosting service and [Source Global CDN](https://www.sourcegcdn.com) projects, and I am committed to contributing to open source projects and development.
