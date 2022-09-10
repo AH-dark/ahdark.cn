@@ -12,12 +12,12 @@
   </a>
 </p>
 
-- 👋 Hi, I’m [@AH-dark](https://ahdark.com)
+- 👋 Hi, I’m [@AH-dark](https://www.ahdark.com)
 - 👀 I’m interested in React / TypeScript / Spring Boot
 - 🌱 I’m currently learning C++ / C Sharp / Python / TypeScript / PHP / Golang / Java
 - 💞️ I’m looking to collaborate on [React](https://github.com/facebook/react)
   / [WordPress](https://github.com/WordPress/WordPress/)
-- 📫 How to reach me : <https://ahdark.com/contact>
+- 📫 How to reach me : <https://www.ahdark.com/contact>
 
 I'm very grateful to [@Yui](https://github.com/topjohncian) for helping me in React and TypeScript, which gives me
 ability to develop the front-end by the React technology.
@@ -26,8 +26,7 @@ ability to develop the front-end by the React technology.
 
 - I was born on April 28, 2007, in Beijing.
 - I live in Haidian District, Beijing, People's Republic of China.
-- I am a junior high school student in [Beijing 101 Middle School](http://www.beijing101.com), and I will take the
-  senior high school entrance examination in 2022.
+- I was a junior high school student in [Beijing 101 Middle School](http://www.beijing101.com), and now I am in a senior high school.
 - I love computer science and have been studying for almost 10 years.
 
-**Welcome to my blog: <https://ahdark.com>**
+**Welcome to my blog: <https://www.ahdark.com>**
