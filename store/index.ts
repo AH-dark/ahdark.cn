@@ -4,16 +4,21 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import viewUpdate from "./reducers/viewUpdate";
 import hydrate from "./reducers/hydrate";
 import api from "./services/api";
+import wp from "~/store/services/wp";
 
 const store = configureStore({
     reducer: {
         viewUpdate,
         hydrate,
         [api.reducerPath]: api.reducer,
+        [wp.reducerPath]: wp.reducer,
     },
     devTools: process.env.NODE_ENV === "development",
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat(thunk).concat(api.middleware),
+        getDefaultMiddleware()
+            .concat(thunk)
+            .concat(api.middleware)
+            .concat(wp.middleware),
 });
 
 export type AppStore = typeof store;

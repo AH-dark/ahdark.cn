@@ -17,7 +17,7 @@ import { setTitle } from "~/store/reducers/viewUpdate";
 import { WP_REST_API_Post } from "wp-types";
 import * as HtmlToText from "html-to-text";
 import ChromeReaderModeRoundedIcon from "@mui/icons-material/ChromeReaderModeRounded";
-import { useListPostsQuery, usePrefetch } from "~/store/services/api";
+import { useListPostsQuery } from "~/store/services/wp";
 
 const Home: NextPage = () => {
     const dispatch = useAppDispatch();
@@ -31,22 +31,6 @@ const Home: NextPage = () => {
         page,
         size,
     });
-
-    const prefetch = usePrefetch("listPosts");
-    useEffect(() => {
-        if (
-            typeof data === "undefined" ||
-            page + 1 <=
-                (data.total % size > 0
-                    ? Math.floor(data.total / size) + 1
-                    : data?.total / size)
-        ) {
-            prefetch({ page: page + 1, size });
-        }
-        if (page - 1 >= 1) {
-            prefetch({ page: page - 1, size });
-        }
-    }, [page, size]);
 
     return (
         <Layout>
@@ -94,7 +78,7 @@ const Home: NextPage = () => {
                                             : undefined
                                     }
                                     sx={{
-                                        mr: 1,
+                                        mr: 1.5,
                                     }}
                                 />
                                 <ListItemSecondaryAction>
@@ -118,9 +102,9 @@ const Home: NextPage = () => {
                 >
                     <Pagination
                         count={
-                            (data?.total || 0) % size > 0
-                                ? Math.floor((data?.total || 0) / size) + 1
-                                : (data?.total || 0) / size
+                            (data?.count || 0) % size > 0
+                                ? Math.floor((data?.count || 0) / size) + 1
+                                : (data?.count || 0) / size
                         }
                         page={page}
                         onChange={(e, page) => {
